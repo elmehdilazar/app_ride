@@ -2,64 +2,41 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\garages;
+use App\Http\Requests\GarageRequest;
+use App\Models\garages as Garage;
 use Illuminate\Http\Request;
 
 class GaragesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $garages = Garage::all();
+        return response()->json($garages);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function show($id)
     {
-        //
+        $garage = Garage::findOrFail($id);
+        return response()->json($garage);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function store(GarageRequest $request)
     {
-        //
+        $garage = Garage::create($request->validated());
+        return response()->json($garage, 201);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(garages $garages)
+    public function update(GarageRequest $request, $id)
     {
-        //
+        $garage = Garage::findOrFail($id);
+        $garage->update($request->validated());
+        return response()->json($garage, 200);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(garages $garages)
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, garages $garages)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(garages $garages)
-    {
-        //
+        $garage = Garage::findOrFail($id);
+        $garage->delete();
+        return response()->json(null, 204);
     }
 }

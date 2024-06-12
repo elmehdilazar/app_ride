@@ -2,64 +2,41 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Drivers;
+use App\Http\Requests\DriverRequest;
+use App\Models\Drivers as Driver;
 use Illuminate\Http\Request;
 
 class DriversController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $drivers = Driver::all();
+        return response()->json($drivers);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function show($id)
     {
-        //
+        $driver = Driver::findOrFail($id);
+        return response()->json($driver);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function store(DriverRequest $request)
     {
-        //
+        $driver = Driver::create($request->validated());
+        return response()->json($driver, 201);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Drivers $drivers)
+    public function update(DriverRequest $request, $id)
     {
-        //
+        $driver = Driver::findOrFail($id);
+        $driver->update($request->validated());
+        return response()->json($driver, 200);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Drivers $drivers)
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Drivers $drivers)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Drivers $drivers)
-    {
-        //
+        $driver = Driver::findOrFail($id);
+        $driver->delete();
+        return response()->json(null, 204);
     }
 }

@@ -2,64 +2,41 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Locations;
+use App\Http\Requests\LocationRequest;
+use App\Models\Locations as Location;
 use Illuminate\Http\Request;
 
 class LocationsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $locations = Location::all();
+        return response()->json($locations);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function show($id)
     {
-        //
+        $location = Location::findOrFail($id);
+        return response()->json($location);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function store(LocationRequest $request)
     {
-        //
+        $location = Location::create($request->validated());
+        return response()->json($location, 201);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Locations $locations)
+    public function update(LocationRequest $request, $id)
     {
-        //
+        $location = Location::findOrFail($id);
+        $location->update($request->validated());
+        return response()->json($location, 200);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Locations $locations)
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Locations $locations)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Locations $locations)
-    {
-        //
+        $location = Location::findOrFail($id);
+        $location->delete();
+        return response()->json(null, 204);
     }
 }
