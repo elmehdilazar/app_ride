@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Drivers>
  */
-class DriversFactory extends Factory
+class DriverFactory extends Factory
 {
     /**
      * Define the model's default state.

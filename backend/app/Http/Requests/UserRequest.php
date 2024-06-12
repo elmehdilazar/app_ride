@@ -26,8 +26,8 @@ class UserRequest extends FormRequest
             'email' => 'required|email|unique:users,email',
             'phone_number' => 'required|string|unique:users,phone_number',
             'password' => 'required|string|min:6',
-            'is_driver' => 'nullable|boolean',
-            'license_number' => 'nullable|string|unique:drivers,license_number',
+            'role' => 'required|string',
+           
         ];
     }
 }
