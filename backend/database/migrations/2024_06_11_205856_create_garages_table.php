@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('garages', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->unsignedBigInteger('location_id'); // Foreign key to locations table
+            $table->integer('capacity');
             $table->timestamps();
+            $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
         });
     }
 
