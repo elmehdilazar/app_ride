@@ -21,8 +21,8 @@
                             <li class="active"><router-link to="/home"><a>Home</a></router-link></li>
                             <li><router-link to="/services"><a href="">Services</a></router-link></li>
                             <li><router-link to="/drivers"><a href="">Drivers</a></router-link></li>
-                            <li><router-link to="/home"><a href="">Cars</a></router-link></li>
-                            <li><router-link to="/home"><a href="">Garage</a></router-link></li>
+                            <li><router-link to="/cars"><a href="">Cars</a></router-link></li>
+                            <li><router-link to="/garages"><a href="">Garage</a></router-link></li>
                             <li><router-link to="/locations"><a href="">Locations</a></router-link></li>
 
                         </ul>

@@ -1,9 +1,7 @@
 import './assets/main.css';
 import '@/assets/js/jquery-3.1.1.js';
 import '@/assets/js/owl.carousel.js';
-/*import '@/assets/js/picker';
-import '@/assets/js/picker.date';
-import '@/assets/js/picker.time';*/
+import '@/assets/js/legacy'
 import '@/assets/js/settings';
 import '@/assets/js/uber-google-maps';
 
