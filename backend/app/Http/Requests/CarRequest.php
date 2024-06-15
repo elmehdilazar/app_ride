@@ -11,7 +11,7 @@ class CarRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,7 @@ class CarRequest extends FormRequest
     public function rules(): array
     {
         return [
-            
+
             'driver_id' => 'required|exists:drivers,id',
             'make' => 'required|string|max:255',
             'model' => 'required|string|max:255',
