@@ -37,6 +37,11 @@
           :name="$t('sidebar.typography')"
           icon="tim-icons icon-align-center"
         />
+          <sidebar-link
+          to="/garages"
+          :name="$t('sidebar.garages')"
+          icon="tim-icons icon-bank"
+        />
         <sidebar-link
           to="/dashboard?enableRTL=true"
           :name="$t('sidebar.rtlSupport')"

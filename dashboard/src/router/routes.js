@@ -17,6 +17,8 @@ const Typography = () =>
 const TableList = () =>
   import(/* webpackChunkName: "common" */ "@/pages/TableList.vue");
 
+const Product = () => import("@/pages/Products.vue");
+const AddGarages = () => import("@/pages/garages/AddGarages.vue");
 const routes = [
   {
     path: "/",
@@ -48,6 +50,11 @@ const routes = [
         name: "maps",
         component: Maps,
       },
+        {
+          path: "garages",
+          name: "garages",
+          component: Product,
+        },
       {
         path: "typography",
         name: "typography",
@@ -58,6 +65,11 @@ const routes = [
         name: "table-list",
         component: TableList,
       },
+      {
+        path: "addGarages",
+        name: "addGarages",
+        component: AddGarages,
+      }
     ],
   },
   { path: "*", component: NotFound },
