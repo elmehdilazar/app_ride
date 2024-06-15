@@ -18,13 +18,13 @@
                     <button id="nav-trigger" class="nav-trigger ion-android-menu"></button>
                     <nav class="main-nav">
                         <ul>
-                            <li class="active"><router-link to="/home"><a >Home</a></router-link></li>
-                            <li><router-link to="/home"><a href="services.html">Services</a></router-link></li>
-                            <li><router-link to="/home"><a href="drivers.html">Drivers</a></router-link></li>
-                            <li><router-link to="/home"><a href="cars.html">Cars</a></router-link></li>
-                            <li><router-link to="/home"><a href="garage.html">Garage</a></router-link></li>
-                            <li><router-link to="/home"><a href="locations.html">Locations</a></router-link></li>
-                     
+                            <li class="active"><router-link to="/home"><a>Home</a></router-link></li>
+                            <li><router-link to="/services"><a href="">Services</a></router-link></li>
+                            <li><router-link to="/drivers"><a href="">Drivers</a></router-link></li>
+                            <li><router-link to="/home"><a href="">Cars</a></router-link></li>
+                            <li><router-link to="/home"><a href="">Garage</a></router-link></li>
+                            <li><router-link to="/locations"><a href="">Locations</a></router-link></li>
+
                         </ul>
                     </nav>
                 </div>
