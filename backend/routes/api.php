@@ -22,13 +22,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['auth:sanctum'])->group(function () {
-    
+
+    Route::apiResource('cars', CarsController::class);
+    Route::apiResource('garages', GaragesController::class);
+    Route::apiResource('locations', LocationsController::class);
+    Route::apiResource("drivers",DriversController::class);
+    Route::apiResource("User",  UserController::class);
 });
-Route::apiResource('cars', CarsController::class);
-Route::apiResource('garages', GaragesController::class);
-Route::apiResource('locations', LocationsController::class);
-Route::apiResource("drivers",DriversController::class);
-Route::apiResource("User",  UserController::class);
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
