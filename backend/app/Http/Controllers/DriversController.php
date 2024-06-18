@@ -10,7 +10,7 @@ class DriversController extends Controller
 {
     public function index()
     {
-        $drivers = Driver::with("user")->get();
+        $drivers = Driver::with('user', 'cars')->get();
         return response()->json($drivers);
     }
 

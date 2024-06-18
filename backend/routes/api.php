@@ -24,9 +24,11 @@ Route::get('/garages', [GaragesController::class, 'index']);
 Route::get('/garages/{id}', [GaragesController::class, 'show']);
 Route::get('/drivers', [DriversController::class, 'index']);
 Route::get('/drivers/{id}', [DriversController::class, 'show']);
+Route::get('/cars', [CarsController::class, 'index']);
+Route::get('/cars/{id}', [CarsController::class, 'show']);
 Route::middleware(['auth:sanctum'])->group(function () {
 
-    Route::apiResource('cars', CarsController::class);
+    Route::apiResource('cars', CarsController::class)->except(['index', 'show']);
     Route::apiResource('locations', LocationsController::class);
     Route::apiResource("drivers",DriversController::class)->except(['index', 'show']);
     Route::apiResource("User",  UserController::class);
