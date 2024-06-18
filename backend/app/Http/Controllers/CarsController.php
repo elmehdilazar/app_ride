@@ -10,7 +10,7 @@ class CarsController extends Controller
 {
     public function index()
     {
-        $cars = Car::all();
+        $cars = Car::with('driver.user')->get();
         return response()->json($cars);
     }
 

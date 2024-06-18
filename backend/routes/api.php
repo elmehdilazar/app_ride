@@ -20,15 +20,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
+Route::get('/garages', [GaragesController::class, 'index']);
+Route::get('/garages/{id}', [GaragesController::class, 'show']);
+Route::get('/drivers', [DriversController::class, 'index']);
+Route::get('/drivers/{id}', [DriversController::class, 'show']);
 Route::middleware(['auth:sanctum'])->group(function () {
 
+    Route::apiResource('cars', CarsController::class);
+    Route::apiResource('locations', LocationsController::class);
+    Route::apiResource("drivers",DriversController::class)->except(['index', 'show']);
+    Route::apiResource("User",  UserController::class);
+    Route::apiResource('garages', GaragesController::class)->except(['index', 'show']);
 });
-Route::apiResource('cars', CarsController::class);
-Route::apiResource('garages', GaragesController::class);
-Route::apiResource('locations', LocationsController::class);
-Route::apiResource("drivers",DriversController::class);
-Route::apiResource("User",  UserController::class);
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');

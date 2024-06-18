@@ -8,9 +8,12 @@ use Illuminate\Http\Request;
 
 class GaragesController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth:sanctum')->except('index');
+    }
     public function index()
     {
-        $garages = Garage::all();
+        $garages = Garage::with("location")->get();
         return response()->json($garages);
     }
 
