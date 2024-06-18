@@ -100,7 +100,7 @@ const routes = [
       {
         //allcars
         path: "/cars/all",
-        name: "allcars",
+        name: "AllCars",
         component: AllCars,
       },
       {
