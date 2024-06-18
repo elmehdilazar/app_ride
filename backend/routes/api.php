@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BookingCarController;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\DriversController;
 use App\Http\Controllers\GaragesController;
@@ -26,6 +27,7 @@ Route::get('/drivers', [DriversController::class, 'index']);
 Route::get('/drivers/{id}', [DriversController::class, 'show']);
 Route::get('/cars', [CarsController::class, 'index']);
 Route::get('/cars/{id}', [CarsController::class, 'show']);
+Route::post('/booking-cars', [BookingCarController::class, 'store']);
 Route::middleware(['auth:sanctum'])->group(function () {
 
     Route::apiResource('cars', CarsController::class)->except(['index', 'show']);
