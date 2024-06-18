@@ -19,6 +19,22 @@ const TableList = () =>
 
 const Product = () => import("@/pages/Products.vue");
 const AddGarages = () => import("@/pages/garages/AddGarages.vue");
+//login
+const Login = () => import("@/pages/auth/Login.vue");
+//editgarage
+const EditGarage = () => import("@/pages/garages/EditGarages.vue");
+//AllCars
+const AllCars = () => import("@/pages/cars/AllCars.vue");
+//addcars
+const AddCars = () => import("@/pages/cars/AddCars.vue");
+//editcars
+const EditCars = () => import("@/pages/cars/EditCars.vue");
+//allusers
+const AllUsers = () => import("@/pages/Users/AllUsers.vue");
+//addusers
+const AddUsers = () => import("@/pages/Users/AddUsers.vue");
+//editusers
+const EditUsers = () => import("@/pages/Users/EditUsers.vue");
 const routes = [
   {
     path: "/",
@@ -69,7 +85,57 @@ const routes = [
         path: "addGarages",
         name: "addGarages",
         component: AddGarages,
+      },
+      {
+        path: "login",
+        name: "login",
+        component: Login,
+      },
+      {
+        path: '/garages/edit',
+        name: 'EditGarage',
+        component: EditGarage,
+        props: true, // Allows route params to be passed as props
+      },
+      {
+        //allcars
+        path: "/cars/all",
+        name: "allcars",
+        component: AllCars,
+      },
+      {
+        //addcars
+        path: "/cars/add",
+        name: "addcars",
+        component: AddCars,
       }
+      , {
+        //editcars
+        path: "/cars/edit",
+        name: "EditCar",
+        component: EditCars,
+         props: true,
+      }
+      //allusers
+      , {
+        path: "/users/all",
+        name: "allusers",
+        component: AllUsers,
+      },
+      {
+        //addusers
+        path: "/users/add",
+        name: "addusers",
+        component: AddUsers,
+      },
+      {
+        //editusers
+        path: "/users/edit",
+        name: "editusers",
+        component: EditUsers,
+      }
+
+
     ],
   },
   { path: "*", component: NotFound },

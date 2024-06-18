@@ -112,6 +112,8 @@
     "tableList": "Table List",
     "typography": "Typography",
     "garages":"garages",
+    "users":"users",
+    "cars":"cars",
     "rtlSupport": "RTL Support"
   }
 }

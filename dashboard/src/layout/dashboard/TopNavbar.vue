@@ -139,8 +139,8 @@
                 <a href="#" class="nav-item dropdown-item">Settings</a>
               </li>
               <div class="dropdown-divider"></div>
-              <li class="nav-link">
-                <a href="#" class="nav-item dropdown-item">Log out</a>
+              <li class="nav-link" @click="logout">
+                <a href="#"  class="nav-item dropdown-item">Log out</a>
               </li>
             </base-dropdown>
           </ul>
@@ -152,12 +152,14 @@
 <script>
 import { CollapseTransition } from "vue2-transitions";
 import Modal from "@/components/Modal";
-
+import { inject } from 'vue';
+import axios from 'axios';
 export default {
   components: {
     CollapseTransition,
     Modal,
   },
+
   computed: {
     routeName() {
       const { name } = this.$route;
@@ -194,6 +196,21 @@ export default {
     toggleMenu() {
       this.showMenu = !this.showMenu;
     },
+    async logout() {
+
+      try {
+        
+        await axios.post('http://127.0.0.1:8000/api/logout', {}, {
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('user-token')}`,
+          },
+        });
+        localStorage.removeItem('user-token');
+        this.$router.push('/login');
+      } catch (error) {
+        console.error('Logout failed:', error);
+      }
+    }
   },
 };
 </script>

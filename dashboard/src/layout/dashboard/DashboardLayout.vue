@@ -1,52 +1,18 @@
 <template>
   <div class="wrapper">
-    <side-bar>
+    <side-bar v-if="this.$route.name!=='login'">
       <template slot="links">
-        <sidebar-link
-          to="/dashboard"
-          :name="$t('sidebar.dashboard')"
-          icon="tim-icons icon-chart-pie-36"
-        />
-        <sidebar-link
-          to="/icons"
-          :name="$t('sidebar.icons')"
-          icon="tim-icons icon-atom"
-        />
-        <sidebar-link
-          to="/maps"
-          :name="$t('sidebar.maps')"
-          icon="tim-icons icon-pin"
-        />
-        <sidebar-link
-          to="/notifications"
-          :name="$t('sidebar.notifications')"
-          icon="tim-icons icon-bell-55"
-        />
-        <sidebar-link
-          to="/profile"
-          :name="$t('sidebar.userProfile')"
-          icon="tim-icons icon-single-02"
-        />
-        <sidebar-link
-          to="/table-list"
-          :name="$t('sidebar.tableList')"
-          icon="tim-icons icon-puzzle-10"
-        />
-        <sidebar-link
-          to="/typography"
-          :name="$t('sidebar.typography')"
-          icon="tim-icons icon-align-center"
-        />
-          <sidebar-link
-          to="/garages"
-          :name="$t('sidebar.garages')"
-          icon="tim-icons icon-bank"
-        />
-        <sidebar-link
-          to="/dashboard?enableRTL=true"
-          :name="$t('sidebar.rtlSupport')"
-          icon="tim-icons icon-world"
-        />
+        <sidebar-link to="/dashboard" :name="$t('sidebar.dashboard')" icon="tim-icons icon-chart-pie-36" />
+        <sidebar-link to="/icons" :name="$t('sidebar.icons')" icon="tim-icons icon-atom" />
+        <sidebar-link to="/maps" :name="$t('sidebar.maps')" icon="tim-icons icon-pin" />
+        <sidebar-link to="/notifications" :name="$t('sidebar.notifications')" icon="tim-icons icon-bell-55" />
+        <sidebar-link to="/profile" :name="$t('sidebar.userProfile')" icon="tim-icons icon-single-02" />
+        <sidebar-link to="/table-list" :name="$t('sidebar.tableList')" icon="tim-icons icon-puzzle-10" />
+        <sidebar-link to="/typography" :name="$t('sidebar.typography')" icon="tim-icons icon-align-center" />
+        <sidebar-link to="/cars/all" :name="$t('sidebar.cars')" icon="tim-icons icon-bus-front-12" />
+        <sidebar-link to="/users/all" :name="$t('sidebar.users')" icon="tim-icons icon-single-02" />
+        <sidebar-link to="/garages" :name="$t('sidebar.garages')" icon="tim-icons icon-bank" />
+        <sidebar-link to="/dashboard?enableRTL=true" :name="$t('sidebar.rtlSupport')" icon="tim-icons icon-world" />
       </template>
     </side-bar>
     <div class="main-panel">

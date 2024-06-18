@@ -341,6 +341,14 @@ export default {
       this.$rtl.enableRTL();
     }
     this.initBigChart(0);
+
+  },
+  mounted() {
+    this.token = localStorage.getItem('user-token');
+
+    if (!this.token) {
+      this.$router.push({ name: "login" });
+    }
   },
   beforeDestroy() {
     if (this.$rtl.isRTL) {
@@ -351,3 +359,4 @@ export default {
 };
 </script>
 <style></style>
+
