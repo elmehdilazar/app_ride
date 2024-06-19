@@ -9,7 +9,7 @@
         <base-input label="Role">
           <select class="form-control" v-model="user.role">
             <option value="admin">Admin</option>
-            <option value="client">Client</option>
+            <option value="mechanic">mechanic</option>
             <option value="driver">Driver</option>
           </select>
         </base-input>
