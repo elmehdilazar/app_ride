@@ -37,6 +37,8 @@ const AddUsers = () => import("@/pages/Users/AddUsers.vue");
 const EditUsers = () => import("@/pages/Users/EditUsers.vue");
 //all booking car
 const AllBookingCar = () => import("@/pages/booking/car/BookingCar.vue");
+// all booking garage
+const AllBookingGarage = () =>import("@/pages/booking/garage/BookingGarage.vue");
 
 const routes = [
   {
@@ -142,9 +144,13 @@ const routes = [
         path: "/bookings/car/all",
         name: "allbookingsCar",
         component: AllBookingCar,
+      },
+      {
+        //allbookigncar
+        path: "/bookings/garage/all",
+        name: "allbookingsGarage",
+        component: AllBookingGarage,
       }
-
-
     ],
   },
   { path: "*", component: NotFound },
