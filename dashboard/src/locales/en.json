@@ -114,6 +114,7 @@
     "garages":"garages",
     "users":"users",
     "cars":"cars",
+     "bookingcars":"booking cars",
     "rtlSupport": "RTL Support"
   }
 }

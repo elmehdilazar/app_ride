@@ -35,6 +35,9 @@ const AllUsers = () => import("@/pages/Users/AllUsers.vue");
 const AddUsers = () => import("@/pages/Users/AddUsers.vue");
 //editusers
 const EditUsers = () => import("@/pages/Users/EditUsers.vue");
+//all booking car
+const AllBookingCar = () => import("@/pages/booking/car/BookingCar.vue");
+
 const routes = [
   {
     path: "/",
@@ -133,6 +136,12 @@ const routes = [
         path: "/users/edit",
         name: "editusers",
         component: EditUsers,
+      },
+      {
+        //allbookigncar
+        path: "/bookings/car/all",
+        name: "allbookingsCar",
+        component: AllBookingCar,
       }
 
 
