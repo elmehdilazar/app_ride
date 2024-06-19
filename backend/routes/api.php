@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookingCarController;
 use App\Http\Controllers\CarsController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DriversController;
 use App\Http\Controllers\GarageBookingController;
 use App\Http\Controllers\GaragesController;
@@ -30,6 +31,10 @@ Route::get('/cars', [CarsController::class, 'index']);
 Route::get('/cars/{id}', [CarsController::class, 'show']);
 Route::post('/booking-cars', [BookingCarController::class, 'store']);
 Route::get('/booking-cars', [BookingCarController::class, 'index']);
+
+
+Route::post('/contacts', [ContactController::class, 'store']);
+Route::get('/contacts', [ContactController::class, 'index']);
 
 Route::apiResource('garage-bookings', GarageBookingController::class);
 
