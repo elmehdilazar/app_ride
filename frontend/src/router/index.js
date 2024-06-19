@@ -5,6 +5,8 @@ import LocationsView from '../views/LocationsView.vue'
 import DriversView from '../views/DriversView.vue'
 import CarsView from '../views/CarsView.vue'
 import GaragesView from '../views/GaragesView.vue'
+// contact view
+import ContactView from '../views/ContactView.vue'
 
 
 
@@ -50,7 +52,12 @@ const router = createRouter({
        path: '/home',
        name: 'home',
        component: HomeView
-     }, 
+    }, 
+     {
+       path: '/contact',
+       name: 'contact',
+       component: ContactView
+     },
     {
       path: '/about',
       name: 'about',

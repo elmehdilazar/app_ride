@@ -24,6 +24,7 @@
                             <li><router-link to="/cars"><a href="">Cars</a></router-link></li>
                             <li><router-link to="/garages"><a href="">Garage</a></router-link></li>
                             <li><router-link to="/locations"><a href="">Locations</a></router-link></li>
+                            <li><router-link to="/contact"><a href="">contact</a></router-link></li>
 
                         </ul>
                     </nav>
