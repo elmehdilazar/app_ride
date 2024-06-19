@@ -7,6 +7,7 @@ import CarsView from '../views/CarsView.vue'
 import GaragesView from '../views/GaragesView.vue'
 
 
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [

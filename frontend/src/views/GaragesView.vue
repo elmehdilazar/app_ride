@@ -144,60 +144,15 @@
         <!--Garage map end -->
 
         <!-- Booking start -->
-        <section class="booking">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="title">
-                            <h2>Book appointment</h2>
-                            <h6>Get your car fixed</h6>
-                        </div>
-                    </div>
-                </div>
-                <form class="booking-form">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <fieldset>
-                                <input type="text" name="name" placeholder="Name" />
-                            </fieldset>
-                        </div>
-                        <div class="col-sm-3">
-                            <fieldset>
-                                <input type="number" name="phone" placeholder="Phone" />
-                            </fieldset>
-                        </div>
-                        <div class="col-sm-3">
-                            <fieldset>
-                                <input type="email" name="email" placeholder="Email" />
-                            </fieldset>
-                        </div>
-                        <div class="col-sm-3">
-                            <fieldset>
-                                <input type="text" name="date" placeholder="Date" class="datepicker" />
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <fieldset>
-                                <textarea name="message" placeholder="Message"></textarea>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <button class="btn btn-primary">Book Now</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </section>
+       <book-garages></book-garages>
         <!-- Booking end -->
 
     </div>
 </template>
 <script>
+import BookGarages from '../components/booking/BookGarages.vue'
 export default {
+  components: { BookGarages },
     
 }
 </script>
