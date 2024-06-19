@@ -39,7 +39,12 @@
           :name="$t('sidebar.garages')"
           icon="tim-icons icon-bank"
         />
-       
+         <sidebar-link
+          to="/contact/all"
+          :name="$t('sidebar.allcontacts')"
+          icon="tim-icons icon-email-85"
+        />
+
 
       </template>
     </side-bar>

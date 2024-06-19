@@ -116,6 +116,7 @@
     "cars":"cars",
      "bookingcars":"booking cars",
      "bookinggarages":"booking garages",
+     "allcontacts":"all contacts",
     "rtlSupport": "RTL Support"
   }
 }
