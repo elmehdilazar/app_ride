@@ -28,6 +28,7 @@ Route::get('/drivers/{id}', [DriversController::class, 'show']);
 Route::get('/cars', [CarsController::class, 'index']);
 Route::get('/cars/{id}', [CarsController::class, 'show']);
 Route::post('/booking-cars', [BookingCarController::class, 'store']);
+Route::get('/booking-cars', [BookingCarController::class, 'index']);
 Route::middleware(['auth:sanctum'])->group(function () {
 
     Route::apiResource('cars', CarsController::class)->except(['index', 'show']);

@@ -13,7 +13,8 @@ class BookingCarController extends Controller
      */
     public function index()
     {
-        //
+        $bookingCar=BookingCar::all();
+        return response()->json($bookingCar,201);
     }
 
     /**

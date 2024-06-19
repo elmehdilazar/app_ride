@@ -27,7 +27,7 @@ class StoreBookingCarRequest extends FormRequest
             'to' => 'required|string|max:255',
             'date' => 'required|date',
             'time' => 'required',
-            'car' => 'required|string',
+            'car' => 'required',
             'email' => 'required|email|max:255',
             'passengers' => 'required|integer',
             'message' => 'nullable|string',
