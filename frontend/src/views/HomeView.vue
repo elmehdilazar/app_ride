@@ -27,128 +27,7 @@
     <!-- Slider end -->
 
     <!-- Booking start -->
-    <section class="booking">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title">
-              <h2>Book taxi online</h2>
-              <h6>Save time &amp; money</h6>
-            </div>
-          </div>
-        </div>
-        <form class="booking-form">
-          <div class="row">
-            <div class="col-xs-6 col-sm-2">
-              <fieldset class="car-type">
-                <input type="checkbox" name="car-type" id="econo" />
-                <label for="econo"><i class="icon-car-econo"></i>Econo</label>
-              </fieldset>
-            </div>
-            <div class="col-xs-6 col-sm-2">
-              <fieldset class="car-type">
-                <input type="checkbox" name="car-type" id="classic" />
-                <label for="classic"><i class="icon-car-classic"></i>Classic</label>
-              </fieldset>
-            </div>
-            <div class="col-xs-6 col-sm-2">
-              <fieldset class="car-type">
-                <input type="checkbox" name="car-type" id="wagon" />
-                <label for="wagon"><i class="icon-car-wagon"></i>Wagon</label>
-              </fieldset>
-            </div>
-            <div class="col-xs-6 col-sm-2">
-              <fieldset class="car-type">
-                <input type="checkbox" name="car-type" id="minivan" />
-                <label for="minivan"><i class="icon-car-minivan"></i>Minivan</label>
-              </fieldset>
-            </div>
-            <div class="col-xs-6 col-sm-2">
-              <fieldset class="car-type">
-                <input type="checkbox" name="car-type" id="suv" />
-                <label for="suv"><i class="icon-car-suv"></i>SUV</label>
-              </fieldset>
-            </div>
-            <div class="col-xs-6 col-sm-2">
-              <fieldset class="car-type">
-                <input type="checkbox" name="car-type" id="limousine" />
-                <label for="limousine"><i class="icon-car-limo"></i>Limousine</label>
-              </fieldset>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-3">
-              <fieldset>
-                <input type="text" name="name" placeholder="Name" />
-              </fieldset>
-              <fieldset>
-                <input type="email" name="email" placeholder="Email" />
-              </fieldset>
-            </div>
-            <div class="col-sm-3">
-              <fieldset>
-                <input type="text" name="from" placeholder="From" />
-              </fieldset>
-              <fieldset>
-                <input type="text" name="to" placeholder="To" />
-              </fieldset>
-            </div>
-            <div class="col-sm-3">
-              <fieldset>
-                <input type="text" name="date" placeholder="Date" class="datepicker" />
-              </fieldset>
-              <fieldset>
-                <input type="text" name="time" placeholder="Time" class="timepicker" />
-              </fieldset>
-            </div>
-            <div class="col-sm-3">
-              <fieldset>
-                <select name="cars">
-                  <option>Cars</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                </select>
-              </fieldset>
-              <fieldset>
-                <select name="passengers">
-                  <option>Passengers</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
-                  <option>11</option>
-                  <option>12</option>
-                  <option>13</option>
-                  <option>14</option>
-                  <option>15</option>
-                  <option>16</option>
-                </select>
-              </fieldset>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <fieldset>
-                <textarea name="message" placeholder="Message"></textarea>
-              </fieldset>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12 text-center">
-              <button class="btn btn-primary">Book Now</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
+<book-car></book-car>
     <!-- Booking end -->
 
     <!-- Price start -->
@@ -351,7 +230,9 @@
   </div>
 </template>
 <script>
+import BookCar from '../components/booking/BookCar.vue'
 export default {
+  components: { BookCar },
   
 }
 </script>
