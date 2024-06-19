@@ -31,11 +31,14 @@ Route::get('/cars', [CarsController::class, 'index']);
 Route::get('/cars/{id}', [CarsController::class, 'show']);
 Route::post('/booking-cars', [BookingCarController::class, 'store']);
 Route::get('/booking-cars', [BookingCarController::class, 'index']);
+//dele booking-cars
+Route::delete('/booking-cars/{id}', [BookingCarController::class, 'destroy']);
 
 
 Route::post('/contacts', [ContactController::class, 'store']);
 Route::get('/contacts', [ContactController::class, 'index']);
-
+//delete contact
+Route::delete('/contacts/{id}', [ContactController::class, 'destroy']);
 Route::apiResource('garage-bookings', GarageBookingController::class);
 
 Route::middleware(['auth:sanctum'])->group(function () {

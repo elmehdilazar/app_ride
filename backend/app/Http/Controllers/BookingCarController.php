@@ -48,8 +48,11 @@ class BookingCarController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(BookingCar $bookingCar)
+    public function destroy($id)
     {
-        //
+        $bookingCar = BookingCar::findOrfail($id);
+        $bookingCar->delete();
+        return response()->json(['message' => 'Deleted successfully'], 200);
+
     }
 }
