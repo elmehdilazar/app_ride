@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="container-fluid">
+    <div v-if="false" class="container-fluid">
       <ul class="nav">
         <li class="nav-item">
           <a class="nav-link" href="http://www.creative-tim.com">

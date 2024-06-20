@@ -66,7 +66,7 @@ export default {
 
       try {
         // Update the user
-        const userResponse = await axios.put(`http://127.0.0.1:8000/api/users/${this.user.id}`, this.user, config);
+        const userResponse = await axios.put(`http://127.0.0.1:8000/api/User/${this.user.id}`, this.user, config);
         console.log("User API Response:", userResponse.data);
 
         // If the user is a driver, update the driver record

@@ -8,7 +8,7 @@
           icon="tim-icons icon-chart-pie-36"
         />
 
-        <sidebar-link
+        <sidebar-link v-if="false"
           to="/profile"
           :name="$t('sidebar.userProfile')"
           icon="tim-icons icon-single-02"
