@@ -50,88 +50,7 @@
                             <h1>Mechanics</h1>
                             <h6>High qualified experts</h6>
                         </div>
-                        <ul class="mechanics inline four-columns">
-                            <li>
-                                <img src="http://placehold.it/150x150" alt="" />
-                                <h6>Abdelkader lkharaz</h6>
-                                <div class="hover">
-                                    <ul>
-                                        <li><a href="http://facebook.com"><i class="ion-social-facebook"></i></a></li>
-                                        <li><a href="http://twitter.com"><i class="ion-social-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="http://placehold.it/150x150" alt="" />
-                                <h6>Ilyas el maliki</h6>
-                                <div class="hover">
-                                    <ul>
-                                        <li><a href="http://facebook.com"><i class="ion-social-facebook"></i></a></li>
-                                        <li><a href="http://twitter.com"><i class="ion-social-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="http://placehold.it/150x150" alt="" />
-                                <h6>Familya</h6>
-                                <div class="hover">
-                                    <ul>
-                                        <li><a href="http://facebook.com"><i class="ion-social-facebook"></i></a></li>
-                                        <li><a href="http://twitter.com"><i class="ion-social-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="http://placehold.it/150x150" alt="" />
-                                <h6>Laarbi serghini</h6>
-                                <div class="hover">
-                                    <ul>
-                                        <li><a href="http://facebook.com"><i class="ion-social-facebook"></i></a></li>
-                                        <li><a href="http://twitter.com"><i class="ion-social-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="http://placehold.it/150x150" alt="" />
-                                <h6>Alal lhajra</h6>
-                                <div class="hover">
-                                    <ul>
-                                        <li><a href="http://facebook.com"><i class="ion-social-facebook"></i></a></li>
-                                        <li><a href="http://twitter.com"><i class="ion-social-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="http://placehold.it/150x150" alt="" />
-                                <h6>Molay ali boughaleb</h6>
-                                <div class="hover">
-                                    <ul>
-                                        <li><a href="http://facebook.com"><i class="ion-social-facebook"></i></a></li>
-                                        <li><a href="http://twitter.com"><i class="ion-social-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="http://placehold.it/150x150" alt="" />
-                                <h6>Abdelkhalak tores</h6>
-                                <div class="hover">
-                                    <ul>
-                                        <li><a href="http://facebook.com"><i class="ion-social-facebook"></i></a></li>
-                                        <li><a href="http://twitter.com"><i class="ion-social-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="http://placehold.it/150x150" alt="" />
-                                <h6>Jamal alpha</h6>
-                                <div class="hover">
-                                    <ul>
-                                        <li><a href="http://facebook.com"><i class="ion-social-facebook"></i></a></li>
-                                        <li><a href="http://twitter.com"><i class="ion-social-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
+                     <all-mecanic></all-mecanic>
                     </div>
                 </div>
             </div>
@@ -139,8 +58,7 @@
         <!--Main end -->
 
         <!-- Garage map start -->
-        <div class="map" id="garage-map">
-        </div>
+
         <!--Garage map end -->
 
         <!-- Booking start -->
@@ -151,8 +69,9 @@
 </template>
 <script>
 import BookGarages from '../components/booking/BookGarages.vue'
+import AllMecanic from '../components/mechanics/AllMecanic.vue'
 export default {
-  components: { BookGarages },
+  components: { BookGarages, AllMecanic },
     
 }
 </script>

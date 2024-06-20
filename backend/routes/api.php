@@ -31,6 +31,7 @@ Route::get('/cars', [CarsController::class, 'index']);
 Route::get('/cars/{id}', [CarsController::class, 'show']);
 Route::post('/booking-cars', [BookingCarController::class, 'store']);
 Route::get('/booking-cars', [BookingCarController::class, 'index']);
+Route::get('/User', [UserController::class, 'index']);
 //dele booking-cars
 Route::delete('/booking-cars/{id}', [BookingCarController::class, 'destroy']);
 
@@ -46,7 +47,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::apiResource('cars', CarsController::class)->except(['index', 'show']);
     Route::apiResource('locations', LocationsController::class);
     Route::apiResource("drivers",DriversController::class)->except(['index', 'show']);
-    Route::apiResource("User",  UserController::class);
+    Route::apiResource("User",  UserController::class)->except(['index']);
     Route::apiResource('garages', GaragesController::class)->except(['index', 'show']);
 });
 Route::post('/register', [AuthController::class, 'register']);
