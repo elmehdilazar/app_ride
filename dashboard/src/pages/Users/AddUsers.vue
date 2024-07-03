@@ -65,7 +65,7 @@ export default {
         }
 
         // Redirect to the users list
-        this.$router.push({ name: "users" });
+        this.$router.push({ name: "allusers" });
       } catch (error) {
         console.error("API Error:", error);
       }
