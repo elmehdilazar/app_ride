@@ -27,7 +27,7 @@ class CarRequest extends FormRequest
             'make' => 'required|string|max:255',
             'model' => 'required|string|max:255',
             'year' => 'required|integer|min:1900|max:' . (date('Y') + 1), // Assuming cars cannot be from the future
-            'license_plate' => 'required|string|unique:cars,license_plate',
+            'license_plate' => 'required|string',
         ];
     }
 }

@@ -23,13 +23,13 @@ class GaragesController extends Controller
         return response()->json($garage);
     }
 
-    public function store(GarageRequest $request)
+    public function store(Re $request)
     {
         $garage = Garage::create($request->validated());
         return response()->json($garage, 201);
     }
 
-    public function update(GarageRequest $request, $id)
+    public function update(Re $request, $id)
     {
         $garage = Garage::findOrFail($id);
         $garage->update($request->validated());
